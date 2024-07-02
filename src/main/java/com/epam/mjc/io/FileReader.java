@@ -11,7 +11,7 @@ public class FileReader {
         int c;
         try (FileInputStream fis = new FileInputStream(file)) {
             while ((c = fis.read()) != -1){
-                line.append(String.valueOf((char) c));
+                line.append(((char) c));
             }
         } catch (IOException e)  {
             throw new ProfileInvalidData(e.getMessage());
